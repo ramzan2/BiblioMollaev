@@ -3,12 +3,108 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:BiblioMollaev.PageFolder.LibrianFolder"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="EditBookPage">
 
-    <Grid>
-        
-    </Grid>
+    <Border Style="{DynamicResource MainBorder}"
+            MouseDown="Border_MouseDown">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="180"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="UniqueCodeTb" Grid.Row="0"
+                         materialDesign:HintAssist.Hint="Уникальный шифр"
+                     Grid.ColumnSpan="2"/>
+            <TextBox x:Name="NameTb" Grid.Row="0"
+                         Grid.Column="3"
+                         materialDesign:HintAssist.Hint="Название книги"
+                          Grid.ColumnSpan="2"/>
+            <ComboBox x:Name="AuthorCb" Grid.Row="1"
+                         Grid.Column="0"
+                         materialDesign:HintAssist.Hint="ФИО Автора"
+                          Grid.ColumnSpan="2"/>
+            <StackPanel Orientation="Horizontal"
+                        Grid.Row="1"
+                        Grid.Column="2">
+
+                <Image Source="/BiblioMollaev;component/ResourceFolder/ImageFolder/free-icon-add-6998878.png" 
+                                   Width="20"
+                       MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+                <TextBlock Text="Добавить книгу" Style="{DynamicResource ButtonTextBlock}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Grid.Row="2"
+                        Grid.Column="2">
+
+                <Image Source="/BiblioMollaev;component/ResourceFolder/ImageFolder/free-icon-add-6998878.png" 
+                                   Width="20"
+                       MouseLeftButtonDown="Image_MouseLeftButtonDown_1"/>
+                <TextBlock Text="Добавить книгу" Style="{DynamicResource ButtonTextBlock}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Grid.Row="3"
+                        Grid.Column="2">
+                <Image Source="/BiblioMollaev;component/ResourceFolder/ImageFolder/free-icon-add-6998878.png" 
+                                   Width="20"
+                       MouseLeftButtonDown="Image_MouseLeftButtonDown_2"/>
+                <TextBlock Text="Добавить книгу" Style="{DynamicResource ButtonTextBlock}"/>
+            </StackPanel>
+
+            <ComboBox x:Name="IDCityCb" Grid.Row="3"
+                         Grid.Column="0"
+                         materialDesign:HintAssist.Hint="Город"
+                         Grid.ColumnSpan="2"/>
+            <ComboBox x:Name="IDPublisherCb" Grid.Row="2"
+                         Grid.Column="0"
+                         materialDesign:HintAssist.Hint="Издательство"
+                         Grid.ColumnSpan="2"/>
+            <TextBox x:Name="YearOfPublicationTb" Grid.Row="2"
+                         Grid.Column="3"
+                         materialDesign:HintAssist.Hint="Год публикации"
+                          Grid.ColumnSpan="2"/>
+            <TextBox x:Name="NumberOfPagesTb" Grid.Row="1"
+                         Grid.Column="3"
+                         materialDesign:HintAssist.Hint="Количество страниц"
+                          Grid.ColumnSpan="2"/>
+            <TextBox x:Name="CostBookTb" Grid.Row="3"
+                         Grid.Column="3"
+                         materialDesign:HintAssist.Hint="Стоимость книги"
+                          Grid.ColumnSpan="2"/>
+            <TextBox x:Name="NumberOfCopiesTb" Grid.Row="4"
+                         Grid.Column="0"
+                         materialDesign:HintAssist.Hint="Количество экземпляров"
+                          Grid.ColumnSpan="2"/>
+
+            <Button x:Name="AddBookBtn"                        
+                        Grid.Row="4"
+                        Grid.Column="3"
+                        Grid.ColumnSpan="2"
+                        materialDesign:ButtonAssist.CornerRadius="7"
+                        Click="AddBookBtn_Click"
+                        >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/BiblioMollaev;component/ResourceFolder/ImageFolder/png-transparent-plus-add-sum-symbol-silver-transformed.png" 
+                                   Width="20"/>
+                    <TextBlock Text="Редактирование книгу" Style="{DynamicResource ButtonTextBlock}"/>
+
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Border>
 </Page>

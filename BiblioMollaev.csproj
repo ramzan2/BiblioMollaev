@@ -70,6 +70,7 @@
     <Compile Include="ClassFolder\CBClass.cs" />
     <Compile Include="ClassFolder\DGClass.cs" />
     <Compile Include="ClassFolder\MBClass.cs" />
+    <Compile Include="ClassFolder\VariableClass.cs" />
     <Compile Include="PageFolder\LibrianFolder\AddBookPage.xaml.cs">
       <DependentUpon>AddBookPage.xaml</DependentUpon>
     </Compile>
