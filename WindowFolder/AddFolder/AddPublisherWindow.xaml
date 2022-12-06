@@ -1,0 +1,45 @@
+﻿<Window x:Class="BiblioMollaev.WindowFolder.AddPublisherWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:BiblioMollaev.WindowFolder"
+        mc:Ignorable="d"
+        Title="AddPublisherWindow" Height="230" Width="370"
+        MaxHeight="230" MinWidth="370"
+        MaxWidth="370"  MinHeight="230"
+         WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="{x:Null}"
+        AllowsTransparency="True"
+        ResizeMode="CanResizeWithGrip">
+    <Border Style="{DynamicResource MainBorder}"
+            MouseDown="Border_MouseDown_1"
+            Background="Wheat">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="80"/>
+
+            </Grid.RowDefinitions>
+            <Label Content="Добавление издательства"
+                   Style="{DynamicResource HeadingLabel}"/>
+            <TextBox x:Name="PublisherTb" Grid.Row="1"
+                         materialDesign:HintAssist.Hint="Введите название издательства"/>
+            <Button x:Name="AddCityBtn"
+                        Content="Добавить издательство"
+                        Grid.Row="3"
+                        materialDesign:ButtonAssist.CornerRadius="7"
+                        Click="AddCityBtn_Click_1"
+                        HorizontalContentAlignment="Center"/>
+            <Image x:Name="CloseIm"
+                   HorizontalAlignment="Left"
+                   Width="30" Height="30"
+                   Margin="0,0,20,0"
+                   Source="/BiblioMollaev;component/ResourceFolder/ImageFolder/free-icon-keyboard-left-arrow-button-60775.png"
+                  MouseLeftButtonDown="CloseIm_MouseLeftButtonDown_1"/>
+        </Grid>
+    </Border>
+</Window>
